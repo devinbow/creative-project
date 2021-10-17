@@ -3,9 +3,8 @@
 
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css" />
-  <title>Dragon Ball fan page</title>
-  <meta charset='UTF-8' />
+  <link rel="stylesheet" href="../styles.css" />
+  <title>Database</title>
 </head>
 
 <body style='background-color:lightblue;'>
@@ -17,32 +16,42 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fav-character.html">My favorite character</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fav-episode.html">Best episode review</a>
+        <li class="nav-item">
+          <a class="nav-link" href="fav-images.html">Best moments from the show</a>
+        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="creative-project.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pages/fav-character.html">My favorite character</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="pages/fav-episode.html">Best episode review</a>
-        <li class="nav-item">
-          <a class="nav-link" href="pages/fav-images.html">Best moments from the show</a>
+          <a class="nav-link" href="database.html">Fact look up</a>
         </li>
       </ul>
     </div>
   </nav>
-  <h1>
-    <center>Welcome to my fan site!</center>
-  </h1>
-  <div class="intro-images">
-    <img src='images/home.jpg' />
-    <img src='images/gohanI.jpg' />
-    <img src='images/vegeta.jpg' />
+
+  <center>
+    <h1>Facts!</h1></br>
+    <h2>Please list a numerical value (1-50) for the respective fact or "random" for a random fact!</h2>
+  </center>
+
+  <center>
+    <form id="form_box">
+      <label>Enter a query:</label>
+      <input id="weatherInput" type="text"></input><br />
+      <input id="weatherSubmit" type="submit" value="Submit"></input>
+    </form>
+  </center>
+
+  <div id="factResults">
   </div>
-  <p class='intro-paragraph'>
-    I am a super big fan of dragon ball, so I plan on updating this website throughout the semester so I can make it look like my
-    dream website!
-  </p>
+
+  <script src="https://anime-facts-rest-api.herokuapp.com/api/v1"></script>
+  <script src="../script.js"></script>
 
   <footer class='foots'>
     <p>Author: Devin Bowman</p>
@@ -53,5 +62,3 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
-</html>
